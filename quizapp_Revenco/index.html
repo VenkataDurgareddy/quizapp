@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
+    <title>Interactive Survey</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Survey Questionnaire</h1>
-
+        <h1>Interactive Survey</h1>
         <div class="timer" id="timer">30:00</div>
-        
         <button id="start-btn" onclick="startSurvey()">Start Survey</button>
         
         <div id="questionnaire" class="hidden">
@@ -19,26 +17,24 @@
             <button id="next-section-btn" onclick="nextSection()">Next Section</button>
             <button id="submit-btn" onclick="submitSurvey()" class="hidden">Submit</button>
         </div>
+
         <div id="review" class="hidden">
-    <h2>Review Your Answers</h2>
-    <div id="review-content">
-    </div>
-    <button id="final-submit-btn" onclick="finalSubmit()">Submit</button>
-    <button onclick="downloadPDF()">Download PDF</button>
-</div>
+            <h2>Review Your Answers</h2>
+            <div id="review-content"></div>
+            <label><input type="checkbox" id="consent-checkbox" onclick="toggleFinalSubmit()"> Yes, I wish to go for a final submission</label>
+            <button id="final-submit-btn" class="hidden" onclick="finalSubmit()">Submit</button>
+        </div>
 
-<div id="loading-spinner" class="hidden">
-    <p>Generating your PDF...</p>
-    <div class="spinner"></div> 
-</div>
+        <div id="success-message" class="hidden">
+            <p>Thank you! Your survey has been submitted.</p>
+        </div>
 
-<div id="success-message" class="hidden">
-    <p>Thank you! Your survey has been submitted.</p>
-</div>
-
+        <div id="loading-spinner" class="hidden">
+            <p>Generating your PDF...</p>
+            <div class="spinner"></div>
+        </div>
     </div>
     <script src="script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-
 </body>
 </html>
