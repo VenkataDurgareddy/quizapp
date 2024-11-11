@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Survey Questionnaire</h1>
+
+        <div class="timer" id="timer">30:00</div>
+        
+        <button id="start-btn" onclick="startSurvey()">Start Survey</button>
+        
+        <div id="questionnaire" class="hidden">
+            <div id="questions-container"></div>
+            <button id="next-section-btn" onclick="nextSection()">Next Section</button>
+            <button id="submit-btn" onclick="submitSurvey()" class="hidden">Submit</button>
+        </div>
+        <div id="review" class="hidden">
+    <h2>Review Your Answers</h2>
+    <div id="review-content">
+    </div>
+    <button id="final-submit-btn" onclick="finalSubmit()">Submit</button>
+    <button onclick="downloadPDF()">Download PDF</button>
+</div>
+
+<div id="loading-spinner" class="hidden">
+    <p>Generating your PDF...</p>
+    <div class="spinner"></div> <!-- Loading spinner -->
+</div>
+
+<div id="success-message" class="hidden">
+    <p>Thank you! Your survey has been submitted.</p>
+</div>
+
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>

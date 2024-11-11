@@ -1,0 +1,215 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #6D83F2, #A1C4FD);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: all 0.4s ease;
+    animation: fadeIn 1s ease;
+}
+
+h1 {
+    color: #4A4A4A;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Timer Style */
+.timer {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animation for Timer */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Button Styles */
+button {
+    margin-top: 20px;
+    padding: 12px 30px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background: #4A90E2;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    background-color: #6B9CE8;
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Question Styles */
+.question {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f1f5f9;
+    border-radius: 8px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    animation: slideIn 0.5s ease;
+}
+
+.question:hover {
+    transform: scale(1.02);
+}
+
+label {
+    color: #333;
+    display: block;
+    font-size: 1em;
+    margin: 8px 0;
+}
+
+/* Option Styles */
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    padding: 10px;
+    background: #e8f0fe;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.option:hover {
+    background-color: #d0e3fc;
+}
+
+input[type="checkbox"], input[type="radio"] {
+    margin-right: 12px;
+    transform: scale(1.3);
+}
+
+/* Text Input Styling */
+input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #4A90E2;
+}
+
+/* Review Section Styles */
+#review-container {
+    padding: 20px;
+    background: #f0f4f8;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#review-container p {
+    margin: 10px 0;
+}
+
+/* Success Message */
+#success-message {
+    padding: 20px;
+    background: #e6ffe6;
+    color: #3a5d3a;
+    border-radius: 8px;
+    font-size: 1.2em;
+    transition: opacity 0.5s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Smooth transitions for toggling elements */
+.container, #questionnaire, #review, #success-message {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Consent Checkbox */
+#consent-checkbox {
+    margin: 15px;
+}
+
+/* Link and download button styling */
+a, #final-submit-btn {
+    text-decoration: none;
+    font-weight: bold;
+    color:black;
+    transition: color 0.3s ease;
+}
+
+a:hover, #final-submit-btn:hover {
+    color: #6B9CE8;
+}
+.hidden {
+    display: none;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #4caf50; /* Customize the color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
